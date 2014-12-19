@@ -1,0 +1,242 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object TabControl1: TTabControl
+    Touch.GestureManager = GestureManager1
+    Align = Client
+    FullSize = True
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 4
+    TabPosition = PlatformDefault
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 320.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'TabItem1'#50980#46041#51452
+      object Button1: TButton
+        Align = Client
+        Margins.Left = 50.000000000000000000
+        Margins.Top = 50.000000000000000000
+        Margins.Right = 50.000000000000000000
+        Margins.Bottom = 50.000000000000000000
+        Size.Width = 540.000000000000000000
+        Size.Height = 331.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = #53364#47533#54616#47732' '#48324#54756#45716#48164' '#53485#51004#47196' '#51060#46041#54633#45768#45796'.'
+        OnClick = Button1Click
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 320.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'TabItem2'#48324#54756#45716#48164
+      object TabControl2: TTabControl
+        Align = Client
+        FullSize = True
+        Size.Width = 640.000000000000000000
+        Size.Height = 431.000000000000000000
+        Size.PlatformDefault = False
+        TabHeight = 49.000000000000000000
+        TabIndex = 3
+        TabOrder = 0
+        TabPosition = Dots
+        object TabItem3: TTabItem
+          Touch.GestureManager = GestureManager1
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'TabItem3'
+          object Text1: TText
+            Align = Contents
+            Size.Width = 640.000000000000000000
+            Size.Height = 431.000000000000000000
+            Size.PlatformDefault = False
+            Text = #48324' '#54616#45208#50640' '#52628#50613#44284
+            TextSettings.Font.Size = 28.000000000000000000
+            TextSettings.FontColor = claGreen
+          end
+        end
+        object TabItem4: TTabItem
+          Touch.GestureManager = GestureManager1
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'TabItem4'
+          object Text2: TText
+            Align = Contents
+            Size.Width = 640.000000000000000000
+            Size.Height = 431.000000000000000000
+            Size.PlatformDefault = False
+            Text = #48324' '#54616#45208#50640' '#49324#46993#44284
+            TextSettings.Font.Size = 28.000000000000000000
+            TextSettings.FontColor = claGreen
+          end
+        end
+        object TabItem5: TTabItem
+          Touch.GestureManager = GestureManager1
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'TabItem5'
+          object Text3: TText
+            Align = Contents
+            Size.Width = 640.000000000000000000
+            Size.Height = 431.000000000000000000
+            Size.PlatformDefault = False
+            Text = #48324' '#54616#45208#50640' '#50424#50424#54632#44284
+            TextSettings.Font.Size = 28.000000000000000000
+            TextSettings.FontColor = claGreen
+          end
+        end
+        object TabItem6: TTabItem
+          Touch.GestureManager = GestureManager1
+          CustomIcon = <
+            item
+            end>
+          IsSelected = True
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'TabItem6'
+          object Text4: TText
+            Align = Contents
+            Size.Width = 640.000000000000000000
+            Size.Height = 431.000000000000000000
+            Size.PlatformDefault = False
+            Text = #48324' '#54616#45208#50640' '#46041#44221#44284
+            TextSettings.Font.Size = 28.000000000000000000
+            TextSettings.FontColor = claGreen
+          end
+        end
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Left = 520
+    Top = 96
+    object ChangeTabAction1: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabItem1
+    end
+    object ChangeTabAction2: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabItem2
+    end
+    object ChangeTabAction3: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabItem3
+    end
+    object ChangeTabAction4: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabItem4
+    end
+    object ChangeTabAction5: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabItem5
+    end
+    object ChangeTabAction6: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabItem6
+    end
+  end
+  object GestureManager1: TGestureManager
+    Left = 520
+    Top = 168
+    GestureData = <
+      item
+        Control = TabControl1
+        Collection = <
+          item
+            Action = ChangeTabAction2
+            GestureID = sgiLeft
+          end>
+      end
+      item
+        Control = TabItem3
+        Collection = <
+          item
+            Action = ChangeTabAction4
+            GestureID = sgiLeft
+          end
+          item
+            Action = ChangeTabAction1
+            GestureID = sgiRight
+          end>
+      end
+      item
+        Control = TabItem4
+        Collection = <
+          item
+            Action = ChangeTabAction5
+            GestureID = sgiLeft
+          end
+          item
+            Action = ChangeTabAction3
+            GestureID = sgiRight
+          end>
+      end
+      item
+        Control = TabItem5
+        Collection = <
+          item
+            Action = ChangeTabAction6
+            GestureID = sgiLeft
+          end
+          item
+            Action = ChangeTabAction4
+            GestureID = sgiRight
+          end>
+      end
+      item
+        Control = TabItem6
+        Collection = <
+          item
+            Action = ChangeTabAction3
+            GestureID = sgiLeft
+          end
+          item
+            Action = ChangeTabAction5
+            GestureID = sgiRight
+          end>
+      end>
+  end
+end

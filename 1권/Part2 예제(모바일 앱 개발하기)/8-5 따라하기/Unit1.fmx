@@ -1,0 +1,69 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 615
+  ClientWidth = 360
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 360.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      Align = Contents
+      Size.Width = 360.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Sample 3-2'
+    end
+    object SpeedButton1: TSpeedButton
+      Position.X = 8.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      Text = 'SpeedButton1'
+      OnClick = SpeedButton1Click
+    end
+    object SpinBox1: TSpinBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = [akTop, akRight]
+      TabOrder = 2
+      Cursor = crIBeam
+      Min = 1.000000000000000000
+      Max = 10.000000000000000000
+      Value = 7.000000000000000000
+      Position.X = 256.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object Layout1: TLayout
+    Align = Center
+    Size.Width = 300.000000000000000000
+    Size.Height = 300.000000000000000000
+    Size.PlatformDefault = False
+    object Line1: TLine
+      Align = Client
+      LineType = Left
+      Size.Width = 300.000000000000000000
+      Size.Height = 300.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Line2: TLine
+      Align = Client
+      LineType = Top
+      RotationAngle = 180.000000000000000000
+      Size.Width = 300.000000000000000000
+      Size.Height = 300.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+end

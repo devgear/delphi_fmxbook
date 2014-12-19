@@ -1,0 +1,55 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object Button1: TButton
+    Position.X = 60.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 265.000000000000000000
+    Size.Height = 80.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Button1'
+    object FloatAnimation1: TFloatAnimation
+      Enabled = True
+      Duration = 1.000000000000000000
+      Loop = True
+      PropertyName = 'Position.Y'
+      StartValue = 60.000000000000000000
+      StopValue = 0.000000000000000000
+    end
+  end
+  object Button2: TButton
+    Position.X = 60.000000000000000000
+    Position.Y = 184.000000000000000000
+    Size.Width = 265.000000000000000000
+    Size.Height = 80.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Button2'
+    object FloatAnimation2: TFloatAnimation
+      Enabled = True
+      Duration = 1.000000000000000000
+      Loop = True
+      PropertyName = 'RotationAngle'
+      StartValue = 0.000000000000000000
+      StopValue = 360.000000000000000000
+    end
+  end
+  object Button3: TButton
+    Position.X = 60.000000000000000000
+    Position.Y = 296.000000000000000000
+    Size.Width = 265.000000000000000000
+    Size.Height = 80.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Button3'
+    OnClick = Button3Click
+  end
+end

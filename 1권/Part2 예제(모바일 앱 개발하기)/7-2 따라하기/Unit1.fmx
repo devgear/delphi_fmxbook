@@ -1,0 +1,54 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      Align = Contents
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Gps Map'
+    end
+    object SpeedButton1: TSpeedButton
+      Position.X = 8.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      Text = 'SpeedButton1'
+      OnClick = SpeedButton1Click
+    end
+  end
+  object StatusBar1: TStatusBar
+    Position.Y = 520.000000000000000000
+    ShowSizeGrip = True
+    Size.Width = 384.000000000000000000
+    Size.Height = 47.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object WebBrowser1: TWebBrowser
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 472.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object LocationSensor1: TLocationSensor
+    Accuracy = 10.000000000000000000
+    Distance = 10.000000000000000000
+    OnLocationChanged = LocationSensor1LocationChanged
+    Left = 296
+    Top = 80
+  end
+end
