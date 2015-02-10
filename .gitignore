@@ -16,6 +16,8 @@ win32/*
 dunit.ini
 *.deployproj
 *.tvsconfig
-OSX32/*
-iOSDevice/*
-Android/*
+**/OSX32/*
+**/iOSDevice/*
+**/Android/*
+**/Win32/*
+**/Win64/*
