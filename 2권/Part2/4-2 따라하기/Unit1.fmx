@@ -1,0 +1,142 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 543
+  ClientWidth = 365
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 365.000000000000000000
+    Size.Height = 543.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 183.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'TabItem1'
+      object ListView1: TListView
+        ItemAppearanceClassName = 'TListItemAppearance'
+        ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Align = Client
+        Size.Width = 365.000000000000000000
+        Size.Height = 446.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        OnItemClick = ListView1ItemClick
+      end
+      object ToolBar1: TToolBar
+        Size.Width = 365.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label1: TLabel
+          Align = Contents
+          Size.Width = 365.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = #45944#54028#51060' '#44592#49696#51088#47308'(XML)'
+        end
+        object Button1: TButton
+          Align = Right
+          Position.X = 317.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'refreshtoolbutton'
+          TabOrder = 1
+          Text = 'Button1'
+          OnClick = Button1Click
+        end
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 182.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'TabItem2'
+      object ToolBar2: TToolBar
+        Size.Width = 365.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label2: TLabel
+          Align = Client
+          Size.Width = 317.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          TextSettings.WordWrap = False
+          Text = #44544' '#51228#47785#51060' '#54364#49884#46121#45768#45796'.'
+        end
+        object Button2: TButton
+          Align = Left
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'arrowlefttoolbutton'
+          TabOrder = 1
+          Text = 'Button2'
+          OnClick = Button2Click
+        end
+      end
+      object WebBrowser1: TWebBrowser
+        Align = Client
+        Size.Width = 365.000000000000000000
+        Size.Height = 446.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Left = 96
+    Top = 224
+    object ChangeTabAction1: TChangeTabAction
+      Category = 'Tab'
+    end
+  end
+  object XMLDocument1: TXMLDocument
+    Left = 208
+    Top = 256
+    DOMVendorDesc = 'Omni XML'
+  end
+  object IdHTTP1: TIdHTTP
+    AllowCookies = True
+    ProxyParams.BasicAuthentication = False
+    ProxyParams.ProxyPort = 0
+    Request.ContentLength = -1
+    Request.ContentRangeEnd = -1
+    Request.ContentRangeStart = -1
+    Request.ContentRangeInstanceLength = -1
+    Request.Accept = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    Request.BasicAuthentication = False
+    Request.UserAgent = 'Mozilla/3.0 (compatible; Indy Library)'
+    Request.Ranges.Units = 'bytes'
+    Request.Ranges = <>
+    HTTPOptions = [hoForceEncodeParams]
+    Left = 208
+    Top = 168
+  end
+end

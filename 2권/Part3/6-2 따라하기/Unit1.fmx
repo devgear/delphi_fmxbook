@@ -1,0 +1,81 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object MViewport3D: TViewport3D
+    Align = alClient
+    Color = claBlack
+    Height = 512.000000000000000000
+    Width = 384.000000000000000000
+    object MyGrid3D: TGrid3D
+      Marks = 4.000000000000000000
+      Frequency = 1.000000000000000000
+      LineColor = x50505050
+      RotationAngle.X = 90.000000000000000000
+      Width = 10.000000000000000000
+      Height = 10.000000000000000000
+      Depth = 0.001000000047497451
+      Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+    end
+    object Layout1: TLayout
+      Align = alBottom
+      Height = 50.000000000000000000
+      Position.Y = 462.000000000000000000
+      Width = 384.000000000000000000
+      object SpeedButton1: TSpeedButton
+        Align = alLeft
+        Height = 48.000000000000000000
+        Position.Y = 1.000000000000000000
+        StyleLookup = 'arrowlefttoolbutton'
+        Text = 'SpeedButton1'
+        Trimming = ttCharacter
+        Width = 48.000000000000000000
+      end
+      object SpeedButton2: TSpeedButton
+        Align = alRight
+        Height = 48.000000000000000000
+        Position.X = 336.000000000000000000
+        Position.Y = 1.000000000000000000
+        StyleLookup = 'arrowrighttoolbutton'
+        Text = 'SpeedButton2'
+        Trimming = ttCharacter
+        Width = 48.000000000000000000
+      end
+      object SpeedButton3: TSpeedButton
+        Align = alCenter
+        Height = 48.000000000000000000
+        StyleLookup = 'additembutton'
+        Text = 'SpeedButton3'
+        Trimming = ttCharacter
+        Width = 48.000000000000000000
+      end
+    end
+  end
+  object StatusBar1: TStatusBar
+    Height = 55.000000000000000000
+    Position.Y = 512.000000000000000000
+    ShowSizeGrip = True
+    Width = 384.000000000000000000
+    object Button1: TButton
+      Height = 44.000000000000000000
+      Position.X = 119.000000000000000000
+      Position.Y = 5.000000000000000000
+      TabOrder = 0
+      Text = 'Button1'
+      Trimming = ttCharacter
+      Width = 73.000000000000000000
+      OnClick = Button1Click
+    end
+  end
+end

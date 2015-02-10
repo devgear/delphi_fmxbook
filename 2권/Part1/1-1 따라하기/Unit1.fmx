@@ -1,0 +1,67 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 346
+  ClientWidth = 574
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnKeyUp = FormKeyUp
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 574.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      Align = Contents
+      Size.Width = 574.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = #49828#47560#53944#54256' '#51221#48372' '#51312#54924
+    end
+    object Button1: TButton
+      Align = Right
+      Position.X = 526.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      TabOrder = 1
+      Text = 'Button1'
+      OnClick = Button1Click
+    end
+  end
+  object ListBox1: TListBox
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 574.000000000000000000
+    Size.Height = 200.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'transparentlistboxstyle'
+    TabOrder = 1
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    object ListBoxItem1: TListBoxItem
+      StyleLookup = 'listboxitemrightdetail'
+      TabOrder = 0
+      Text = #44592#44592' '#47784#45944' :'
+    end
+    object ListBoxItem2: TListBoxItem
+      Position.Y = 44.000000000000000000
+      StyleLookup = 'listboxitemrightdetail'
+      TabOrder = 1
+      Text = 'OS '#51333#47448' :'
+    end
+    object ListBoxItem3: TListBoxItem
+      Position.Y = 88.000000000000000000
+      StyleLookup = 'listboxitemrightdetail'
+      TabOrder = 2
+      Text = 'OS '#48260#51204' :'
+    end
+  end
+end

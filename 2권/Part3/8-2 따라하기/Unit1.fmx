@@ -1,0 +1,107 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 335
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object MViewport3D: TViewport3D
+    Align = Client
+    Camera = Camera1
+    Color = claBlack
+    Size.Width = 640.000000000000000000
+    Size.Height = 280.000000000000000000
+    Size.PlatformDefault = False
+    UsingDesignCamera = False
+    OnMouseDown = MViewport3DMouseDown
+    OnMouseMove = MViewport3DMouseMove
+    OnMouseUp = MViewport3DMouseUp
+    object Left_SB: TSpeedButton
+      Position.Y = 128.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'arrowlefttoolbutton'
+      Text = 'Left_SB'
+      OnClick = Left_SBClick
+    end
+    object Right_SB: TSpeedButton
+      Anchors = [akLeft, akRight]
+      Position.X = 584.000000000000000000
+      Position.Y = 128.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'arrowrighttoolbutton'
+      Text = 'Right_SB'
+      OnClick = Right_SBClick
+    end
+    object Grid3D1: TGrid3D
+      Marks = 4.000000000000000000
+      Frequency = 2.000000000000000000
+      LineColor = x50505050
+      RotationAngle.X = 90.000000000000000000
+      Width = 30.000000000000000000
+      Height = 20.000000000000000000
+      Depth = 0.001000000047497451
+      HitTest = False
+      Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+    end
+    object Camera1: TCamera
+      AngleOfView = 45.000000000000000000
+      Position.Y = -10.000000000000000000
+      Position.Z = -15.000000000000000000
+      RotationAngle.X = 340.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      Quanternion = '(-0.173647969961166,0,0,0.984807789325714)'
+    end
+    object Dummy1: TDummy
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+    end
+  end
+  object Layout1: TLayout
+    Align = Bottom
+    Position.Y = 280.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 55.000000000000000000
+    Size.PlatformDefault = False
+    object ComboBox1: TComboBox
+      DisableFocusEffect = False
+      ItemIndex = 0
+      Position.X = 32.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnChange = ComboBox1Change
+      object TListBoxItem
+        IsSelected = True
+        Size.Width = 19.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Cube'
+      end
+      object TListBoxItem
+        TabOrder = 1
+        Text = #48148#46988#44060#48708
+      end
+    end
+  end
+  object RotateTimer: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = RotateTimerTimer
+    Left = 544
+    Top = 286
+  end
+end

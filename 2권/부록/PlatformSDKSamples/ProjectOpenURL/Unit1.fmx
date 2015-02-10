@@ -1,0 +1,81 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 569
+  ClientWidth = 385
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object Button1: TButton
+    Align = Bottom
+    Position.Y = 525.000000000000000000
+    Size.Width = 385.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = #49892#54665#54616#44592
+    OnClick = Button1Click
+  end
+  object ListBox1: TListBox
+    Align = Client
+    Size.Width = 385.000000000000000000
+    Size.Height = 477.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    object ListBoxItem1: TListBoxItem
+      ItemData.Detail = 'http://tech.devgear.co.kr/'
+      TabOrder = 0
+      Text = #50937#48652#46972#50864#51200' '#49892#54665
+    end
+    object ListBoxItem2: TListBoxItem
+      ItemData.Detail = 'tel://114'
+      Position.Y = 44.000000000000000000
+      TabOrder = 1
+      Text = #51204#54868#44152#44592
+    end
+    object ListBoxItem3: TListBoxItem
+      ItemData.Detail = 'sms://114'
+      Position.Y = 88.000000000000000000
+      TabOrder = 2
+      Text = 'SMS '#48372#45236#44592
+    end
+    object ListBoxItem4: TListBoxItem
+      ItemData.Detail = 'mailto://ask@embarcadero.kr'
+      Position.Y = 132.000000000000000000
+      TabOrder = 3
+      Text = #47700#51068#51204#49569#54616#44592
+    end
+    object ListBoxItem5: TListBoxItem
+      ItemData.Detail = 'twitter://user?screen_name=devgear'
+      Position.Y = 176.000000000000000000
+      TabOrder = 4
+      Text = #53944#50948#53552' '#45936#48652#44592#50612' '#54168#51060#51648' '#50676#44592
+    end
+    object ListBoxItem6: TListBoxItem
+      ItemData.Detail = 'fb://profile/196936860384889'
+      Position.Y = 220.000000000000000000
+      TabOrder = 5
+      Text = #54168#51060#49828#48513' '#45936#48652#44592#50612' '#54168#51060#51648#50676#44592
+    end
+  end
+  object ToolBar1: TToolBar
+    Size.Width = 385.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Label1: TLabel
+      Align = Client
+      Size.Width = 385.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Open URL  '#45936#47784
+    end
+  end
+end

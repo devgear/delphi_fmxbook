@@ -1,0 +1,165 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  Color = claBlack
+  ClientHeight = 531
+  ClientWidth = 962
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object RoadGrid3D: TGrid3D
+    Marks = 4.000000000000000000
+    Frequency = 1.500000000000000000
+    LineColor = x50505050
+    Position.Y = 2.000000000000000000
+    RotationAngle.X = 90.000000000000000000
+    Width = 30.000000000000000000
+    Height = 100.000000000000000000
+    Depth = 0.001000000047497451
+    Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+    object FloatAniRoad_XP: TFloatAnimation
+      Duration = 5.000000000000000000
+      Loop = True
+      PropertyName = 'Position.X'
+      StartValue = 10.000000000000000000
+      StopValue = -10.000000000000000000
+    end
+    object FloatAniRoad_Z: TFloatAnimation
+      Enabled = True
+      Duration = 5.000000000000000000
+      Loop = True
+      PropertyName = 'Position.Z'
+      StartValue = 10.000000000000000000
+      StopValue = -10.000000000000000000
+    end
+    object FloatAniRoad_XM: TFloatAnimation
+      Duration = 5.000000000000000000
+      Loop = True
+      PropertyName = 'Position.X'
+      StartValue = -10.000000000000000000
+      StopValue = 10.000000000000000000
+    end
+  end
+  object CarBodyCube: TCube
+    Position.Z = -6.000000000000000000
+    Width = 2.000000000000000000
+    Height = 1.000000000000000000
+    Depth = 4.000000000000000000
+    MaterialSource = LightMaterialSource1
+    object DirectionDummy: TDummy
+      Position.Z = 1.500000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      object WheelDummy: TDummy
+        Width = 1.000000000000000000
+        Height = 1.000000000000000000
+        Depth = 1.000000000000000000
+        object WheelCylinder1: TCylinder
+          Position.X = 1.500000000000000000
+          RotationAngle.Z = 90.000000000000000000
+          Width = 2.000000000000000000
+          Height = 1.000000000000000000
+          Depth = 2.000000000000000000
+          MaterialSource = LightMaterialSource2
+          Quanternion = '(0,0,0.70710676908493,0.70710676908493)'
+        end
+        object WheelCylinder2: TCylinder
+          Position.X = -1.500000000000000000
+          RotationAngle.Z = 90.000000000000000000
+          Width = 2.000000000000000000
+          Height = 1.000000000000000000
+          Depth = 2.000000000000000000
+          MaterialSource = LightMaterialSource2
+          Quanternion = '(0,0,0.70710676908493,0.70710676908493)'
+        end
+        object FloatAnimation_Wheel: TFloatAnimation
+          Enabled = True
+          Duration = 1.000000000000000000
+          Inverse = True
+          Loop = True
+          PropertyName = 'RotationAngle.X'
+          StartValue = 0.000000000000000000
+          StopValue = 360.000000000000000000
+        end
+      end
+    end
+    object WheelDummy_back: TDummy
+      Position.Z = -1.500000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      object WheelCylinder3: TCylinder
+        Position.X = 1.500000000000000000
+        RotationAngle.Z = 90.000000000000000000
+        Width = 2.000000000000000000
+        Height = 1.000000000000000000
+        Depth = 2.000000000000000000
+        MaterialSource = LightMaterialSource2
+        Quanternion = '(0,0,0.70710676908493,0.70710676908493)'
+      end
+      object WheelCylinder4: TCylinder
+        Position.X = -1.500000000000000000
+        RotationAngle.Z = 90.000000000000000000
+        Width = 2.000000000000000000
+        Height = 1.000000000000000000
+        Depth = 2.000000000000000000
+        MaterialSource = LightMaterialSource2
+        Quanternion = '(0,0,0.70710676908493,0.70710676908493)'
+      end
+      object FloatAnimation_Wheel2: TFloatAnimation
+        Enabled = True
+        Duration = 1.000000000000000000
+        Inverse = True
+        Loop = True
+        PropertyName = 'RotationAngle.X'
+        StartValue = 0.000000000000000000
+        StopValue = 360.000000000000000000
+      end
+    end
+    object Cube1: TCube
+      Position.Y = -1.000000000000000000
+      Position.Z = -1.000000000000000000
+      Width = 2.000000000000000000
+      Height = 0.699999988079071100
+      Depth = 1.000000000000000000
+      MaterialSource = LightMaterialSource1
+    end
+  end
+  object Light1: TLight
+    Color = claWhite
+    LightType = Directional
+    SpotCutOff = 180.000000000000000000
+    Position.X = 5.949038028717041000
+    Position.Y = -2.733551979064941000
+    RotationAngle.X = 331.988677978515600000
+    RotationAngle.Y = 331.463012695312500000
+    RotationAngle.Z = 345.509826660156200000
+    Width = 1.000000000000000000
+    Height = 1.000000000000000000
+    Depth = 1.000000000000000000
+    Quanternion = 
+      '(0.136619180440903,0.207649484276772,0.232269927859306,-0.940355' +
+      '181694031)'
+  end
+  object LightMaterialSource1: TLightMaterialSource
+    Diffuse = xFF7F7FFF
+    Ambient = xFF00007F
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+    Left = 184
+    Top = 280
+  end
+  object LightMaterialSource2: TLightMaterialSource
+    Diffuse = claSlategray
+    Ambient = xFF202020
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+    Left = 120
+    Top = 56
+  end
+end

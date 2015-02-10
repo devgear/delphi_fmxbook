@@ -1,0 +1,248 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 499
+  ClientWidth = 344
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 344.000000000000000000
+    Size.Height = 499.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 1
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 172.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'TabItem1'
+      object ListView1: TListView
+        ItemAppearanceClassName = 'TListItemAppearance'
+        ItemEditAppearanceClassName = 'TListItemDeleteAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        ItemIndex = 0
+        Align = Client
+        Size.Width = 344.000000000000000000
+        Size.Height = 402.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        OnItemClick = ListView1ItemClick
+      end
+      object ToolBar1: TToolBar
+        Size.Width = 344.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Label1: TLabel
+          Align = Client
+          Size.Width = 296.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = #45944#54028#51060' '#44592#49696#51088#47308'(JSON)'
+        end
+        object Button1: TButton
+          Align = Right
+          Position.X = 296.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'refreshtoolbutton'
+          TabOrder = 1
+          Text = 'Button1'
+          OnClick = Button1Click
+        end
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 172.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'TabItem2'
+      object ToolBar2: TToolBar
+        Size.Width = 344.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Label2: TLabel
+          Align = Client
+          Size.Width = 296.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          TextSettings.WordWrap = False
+          Text = 'VCL'#51032' '#50976#50857#54616#51648#47564' '#45459#52832#49688' '#51080#45716' '#44592#45733' '#46308
+        end
+        object Button2: TButton
+          Align = Left
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'arrowlefttoolbutton'
+          TabOrder = 1
+          Text = 'Button2'
+          OnClick = Button2Click
+        end
+      end
+      object WebBrowser1: TWebBrowser
+        Align = Client
+        Size.Width = 344.000000000000000000
+        Size.Height = 402.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+  end
+  object RESTClient1: TRESTClient
+    Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
+    AcceptCharset = 'UTF-8, *;q=0.8'
+    AcceptEncoding = 'identity'
+    BaseURL = 'http://ajax.googleapis.com/ajax/services/feed'
+    Params = <>
+    HandleRedirects = True
+    RaiseExceptionOn500 = False
+    Left = 56
+    Top = 192
+  end
+  object RESTRequest1: TRESTRequest
+    Client = RESTClient1
+    Params = <
+      item
+        Kind = pkURLSEGMENT
+        name = 'num'
+        Options = [poAutoCreated]
+        Value = '10'
+      end
+      item
+        Kind = pkURLSEGMENT
+        name = 'url'
+        Options = [poAutoCreated]
+        Value = 'http://tech.devgear.co.kr/delphi_news/rss'
+      end>
+    Resource = 'load?v=1.0&num={num}&q={url}'
+    Response = RESTResponse1
+    SynchronizedEvents = False
+    Left = 56
+    Top = 128
+  end
+  object RESTResponse1: TRESTResponse
+    ContentType = 'text/javascript'
+    RootElement = 'responseData.feed.entries'
+    Left = 184
+    Top = 128
+  end
+  object RESTResponseDataSetAdapter1: TRESTResponseDataSetAdapter
+    Active = True
+    Dataset = FDMemTable1
+    FieldDefs = <>
+    Response = RESTResponse1
+    Left = 184
+    Top = 192
+  end
+  object FDMemTable1: TFDMemTable
+    Active = True
+    FieldDefs = <
+      item
+        Name = 'title'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'link'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'author'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'publishedDate'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'contentSnippet'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'content'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'categories'
+        DataType = ftWideString
+        Size = 255
+      end>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired]
+    UpdateOptions.CheckRequired = False
+    AutoCommitUpdates = False
+    StoreDefs = True
+    Left = 184
+    Top = 256
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = FDMemTable1
+    ScopeMappings = <>
+    Left = 80
+    Top = 392
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 397
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'title'
+      Control = ListView1
+      FillExpressions = <
+        item
+          SourceMemberName = 'link'
+          ControlMemberName = 'Detail'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkPropertyToFieldText: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'title'
+      Component = Label2
+      ComponentProperty = 'Text'
+    end
+  end
+  object ActionList1: TActionList
+    Left = 200
+    Top = 392
+    object ChangeTabAction1: TChangeTabAction
+    end
+  end
+end

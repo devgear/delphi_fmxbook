@@ -1,0 +1,130 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  Color = claBlack
+  ClientHeight = 384
+  ClientWidth = 598
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  DesignerMobile = True
+  DesignerWidth = 598
+  DesignerHeight = 384
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 3
+  DesignerOSVersion = ''
+  object EDummy: TDummy
+    Width = 1.000000000000000000
+    Height = 1.000000000000000000
+    Depth = 1.000000000000000000
+    object EarthSphere: TSphere
+      Position.X = 10.000000000000000000
+      RotationAngle.Z = 23.399999618530270000
+      Width = 3.000000000000000000
+      Height = 3.000000000000000000
+      Depth = 3.000000000000000000
+      MaterialSource = LightMaterialSource1
+      Quanternion = '(0,0,0.202787294983864,0.97922283411026)'
+      object MDummy: TDummy
+        Width = 1.000000000000000000
+        Height = 1.000000000000000000
+        Depth = 1.000000000000000000
+        object MoonSphere: TSphere
+          Position.X = -3.000000000000000000
+          Width = 1.000000000000000000
+          Height = 1.000000000000000000
+          Depth = 1.000000000000000000
+          MaterialSource = LightMaterialSource3
+        end
+        object FloatAnimation2: TFloatAnimation
+          Enabled = True
+          Duration = 1.000000000000000000
+          Loop = True
+          PropertyName = 'RotationAngle.Y'
+          StartValue = 0.000000000000000000
+          StopValue = 360.000000000000000000
+        end
+      end
+    end
+    object FloatAnimation1: TFloatAnimation
+      Enabled = True
+      Duration = 12.000000000000000000
+      Loop = True
+      PropertyName = 'RotationAngle.Y'
+      StartValue = 0.000000000000000000
+      StopValue = 360.000000000000000000
+    end
+  end
+  object Grid3D1: TGrid3D
+    Marks = 4.000000000000000000
+    Frequency = 2.000000000000000000
+    LineColor = x50505050
+    RotationAngle.X = 90.000000000000000000
+    Width = 20.000000000000000000
+    Height = 20.000000000000000000
+    Depth = 0.001000000047497451
+    Visible = False
+    Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+  end
+  object SunSphere: TSphere
+    Width = 2.000000000000000000
+    Height = 2.000000000000000000
+    Depth = 2.000000000000000000
+    object Light1: TLight
+      Color = claWhite
+      LightType = ltPoint
+      SpotCutOff = 180.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+    end
+  end
+  object VDummy: TDummy
+    Width = 1.000000000000000000
+    Height = 1.000000000000000000
+    Depth = 1.000000000000000000
+    object VenusSphere: TSphere
+      Position.X = -5.000000000000000000
+      Width = 2.000000000000000000
+      Height = 2.000000000000000000
+      Depth = 2.000000000000000000
+      MaterialSource = LightMaterialSource2
+    end
+    object FloatAnimation3: TFloatAnimation
+      Enabled = True
+      Duration = 7.500000000000000000
+      Loop = True
+      PropertyName = 'RotationAngle.Y'
+      StartValue = 0.000000000000000000
+      StopValue = 360.000000000000000000
+    end
+  end
+  object LightMaterialSource1: TLightMaterialSource
+    Diffuse = claBlue
+    Ambient = xFF202020
+    Emissive = claNull
+    Specular = claAqua
+    Shininess = 5
+    Left = 570
+    Top = 16
+  end
+  object LightMaterialSource2: TLightMaterialSource
+    Diffuse = claChartreuse
+    Ambient = xFF202020
+    Emissive = claNull
+    Specular = claYellow
+    Shininess = 5
+    Left = 520
+    Top = 16
+  end
+  object LightMaterialSource3: TLightMaterialSource
+    Diffuse = claWhite
+    Ambient = xFF202020
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+    Left = 464
+    Top = 16
+  end
+end

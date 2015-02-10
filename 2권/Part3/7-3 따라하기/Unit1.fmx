@@ -1,0 +1,157 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 335
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object MViewport3D: TViewport3D
+    Align = Client
+    Camera = Camera1
+    Color = claBlack
+    Size.Width = 424.000000000000000000
+    Size.Height = 335.000000000000000000
+    Size.PlatformDefault = False
+    UsingDesignCamera = False
+    object Grid3D1: TGrid3D
+      Marks = 4.000000000000000000
+      Frequency = 1.000000000000000000
+      LineColor = x50505050
+      RotationAngle.X = 90.000000000000000000
+      Width = 15.000000000000000000
+      Height = 15.000000000000000000
+      Depth = 0.001000000047497451
+      Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+    end
+    object Cone1: TCone
+      Width = 5.000000000000000000
+      Height = 5.000000000000000000
+      Depth = 5.000000000000000000
+      SubdivisionsCap = 3
+      MaterialSource = LightMaterialSource1
+    end
+    object Camera1: TCamera
+      AngleOfView = 45.000000000000000000
+      Position.Z = -10.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+    end
+    object Light1: TLight
+      Color = claWhite
+      LightType = Point
+      SpotCutOff = 180.000000000000000000
+      Position.Y = -8.000000000000000000
+      Position.Z = 5.000000000000000000
+      RotationAngle.X = 45.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      Quanternion = '(-0.382683426141739,0,0,-0.923879444599152)'
+    end
+    object LightMaterialSource1: TLightMaterialSource
+      Diffuse = claWhite
+      Ambient = xFF202020
+      Emissive = claNull
+      Specular = xFF606060
+      Shininess = 30
+      Left = 848
+      Top = 448
+    end
+    object Cylinder1: TCylinder
+      Position.X = 6.000000000000000000
+      Position.Y = -4.000000000000000000
+      Position.Z = 6.000000000000000000
+      Width = 2.000000000000000000
+      Height = 8.000000000000000000
+      Depth = 2.000000000000000000
+      MaterialSource = LightMaterialSource1
+    end
+    object Cylinder2: TCylinder
+      Position.X = -6.000000000000000000
+      Position.Y = -4.000000000000000000
+      Position.Z = 6.000000000000000000
+      Width = 2.000000000000000000
+      Height = 8.000000000000000000
+      Depth = 2.000000000000000000
+      MaterialSource = LightMaterialSource1
+    end
+  end
+  object Layout1: TLayout
+    Align = Right
+    Position.X = 424.000000000000000000
+    Size.Width = 216.000000000000000000
+    Size.Height = 335.000000000000000000
+    Size.PlatformDefault = False
+    object LabelZ: TLabel
+      AutoSize = True
+      Position.X = 8.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 115.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = #52852#47700#46972' Z '#44033#46020
+    end
+    object AngleZ_TrackBar: TTrackBar
+      Frequency = 1.000000000000000000
+      Max = 360.000000000000000000
+      Orientation = Horizontal
+      Position.X = 8.000000000000000000
+      Position.Y = 104.000000000000000000
+      Size.Width = 169.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnChange = AngleZ_TrackBarChange
+    end
+    object AngleX_TrackBar: TTrackBar
+      Tag = 360
+      Frequency = 1.000000000000000000
+      Max = 360.000000000000000000
+      Min = 315.000000000000000000
+      Orientation = Horizontal
+      Position.X = 8.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 169.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Value = 360.000000000000000000
+      OnChange = AngleX_TrackBarChange
+    end
+    object LabelX: TLabel
+      AutoSize = True
+      Position.X = 8.000000000000000000
+      Size.Width = 116.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = #52852#47700#46972' X '#44033#46020
+    end
+    object CheckBox1: TCheckBox
+      Position.X = 24.000000000000000000
+      Position.Y = 152.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'CheckBox1'
+      OnChange = CheckBox1Change
+    end
+    object CameraAniButton: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 192.000000000000000000
+      Size.Width = 153.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = #52852#47700#46972' Ani'
+      OnClick = CameraAniButtonClick
+    end
+  end
+end

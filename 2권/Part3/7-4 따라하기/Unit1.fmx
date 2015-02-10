@@ -1,0 +1,196 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 335
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  OnCreate = FormCreate
+  DesignerMobile = True
+  DesignerWidth = 640
+  DesignerHeight = 360
+  DesignerDeviceName = 'Samsung Galaxy S4'
+  DesignerOrientation = 3
+  DesignerOSVersion = ''
+  object MViewport3D: TViewport3D
+    Align = alClient
+    Camera = Camera1
+    Color = claBlack
+    Height = 335.000000000000000000
+    UsingDesignCamera = False
+    Width = 424.000000000000000000
+    object Grid3D1: TGrid3D
+      Marks = 4.000000000000000000
+      Frequency = 1.000000000000000000
+      LineColor = x50505050
+      RotationAngle.X = 90.000000000000000000
+      Width = 15.000000000000000000
+      Height = 15.000000000000000000
+      Depth = 0.001000000047497451
+      Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+    end
+    object Cone1: TCone
+      Width = 5.000000000000000000
+      Height = 5.000000000000000000
+      Depth = 5.000000000000000000
+      SubdivisionsCap = 3
+      MaterialSource = LightMaterialSource1
+    end
+    object Camera1: TCamera
+      Position.Z = -10.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+    end
+    object Light1: TLight
+      Color = claWhite
+      LightType = ltPoint
+      SpotCutOff = 180.000000000000000000
+      Position.Y = -8.000000000000000000
+      Position.Z = 5.000000000000000000
+      RotationAngle.X = 45.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      Quanternion = '(-0.382683426141739,0,0,-0.923879444599152)'
+    end
+    object LightMaterialSource1: TLightMaterialSource
+      Diffuse = claWhite
+      Ambient = xFF202020
+      Emissive = claNull
+      Specular = xFF606060
+      Shininess = 30
+      Left = 848
+      Top = 448
+    end
+    object Cylinder1: TCylinder
+      Position.X = 6.000000000000000000
+      Position.Y = -4.000000000000000000
+      Position.Z = 6.000000000000000000
+      Width = 2.000000000000000000
+      Height = 8.000000000000000000
+      Depth = 2.000000000000000000
+      MaterialSource = LightMaterialSource1
+    end
+    object Cylinder2: TCylinder
+      Position.X = -6.000000000000000000
+      Position.Y = -4.000000000000000000
+      Position.Z = 6.000000000000000000
+      Width = 2.000000000000000000
+      Height = 8.000000000000000000
+      Depth = 2.000000000000000000
+      MaterialSource = LightMaterialSource1
+    end
+  end
+  object Layout1: TLayout
+    Align = alRight
+    Height = 335.000000000000000000
+    Position.X = 424.000000000000000000
+    Width = 216.000000000000000000
+    object LabelZ: TLabel
+      AutoSize = True
+      Height = 28.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 72.000000000000000000
+      Text = #52852#47700#46972' Z '#44033#46020
+      Width = 116.000000000000000000
+      WordWrap = False
+      Trimming = ttCharacter
+    end
+    object AngleZ_TrackBar: TTrackBar
+      Frequency = 1.000000000000000000
+      Height = 32.000000000000000000
+      Max = 360.000000000000000000
+      Orientation = orHorizontal
+      Position.X = 8.000000000000000000
+      Position.Y = 104.000000000000000000
+      TabOrder = 1
+      Width = 169.000000000000000000
+      OnChange = AngleZ_TrackBarChange
+    end
+    object AngleX_TrackBar: TTrackBar
+      Tag = 360
+      Frequency = 1.000000000000000000
+      Height = 32.000000000000000000
+      Max = 360.000000000000000000
+      Min = 315.000000000000000000
+      Orientation = orHorizontal
+      Position.X = 8.000000000000000000
+      Position.Y = 32.000000000000000000
+      TabOrder = 2
+      Value = 360.000000000000000000
+      Width = 169.000000000000000000
+      OnChange = AngleX_TrackBarChange
+    end
+    object LabelX: TLabel
+      AutoSize = True
+      Height = 28.000000000000000000
+      Position.X = 8.000000000000000000
+      Text = #52852#47700#46972' X '#44033#46020
+      Width = 116.000000000000000000
+      WordWrap = False
+      Trimming = ttCharacter
+    end
+    object CheckBox1: TCheckBox
+      Height = 23.000000000000000000
+      Position.X = 24.000000000000000000
+      Position.Y = 152.000000000000000000
+      TabOrder = 4
+      Text = 'CheckBox1'
+      Width = 120.000000000000000000
+      OnChange = CheckBox1Change
+    end
+    object CameraAniButton: TButton
+      Height = 44.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 192.000000000000000000
+      TabOrder = 5
+      Text = #52852#47700#46972' Ani'
+      Trimming = ttCharacter
+      Width = 153.000000000000000000
+      OnClick = CameraAniButtonClick
+    end
+    object ZoomIn: TButton
+      Height = 44.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 240.000000000000000000
+      TabOrder = 6
+      Text = 'Zoom In'
+      Trimming = ttCharacter
+      Width = 89.000000000000000000
+      OnClick = ZoomInClick
+    end
+    object PanPlus: TButton
+      Height = 44.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 288.000000000000000000
+      TabOrder = 7
+      Text = 'Pan +'
+      Trimming = ttCharacter
+      Width = 89.000000000000000000
+      OnClick = PanPlusClick
+    end
+    object ZoomOut: TButton
+      Height = 44.000000000000000000
+      Position.X = 112.000000000000000000
+      Position.Y = 240.000000000000000000
+      TabOrder = 8
+      Text = 'Zoom Out'
+      Trimming = ttCharacter
+      Width = 89.000000000000000000
+      OnClick = ZoomOutClick
+    end
+    object PanMinus: TButton
+      Height = 44.000000000000000000
+      Position.X = 112.000000000000000000
+      Position.Y = 288.000000000000000000
+      TabOrder = 9
+      Text = 'Pan -'
+      Trimming = ttCharacter
+      Width = 89.000000000000000000
+      OnClick = PanMinusClick
+    end
+  end
+end

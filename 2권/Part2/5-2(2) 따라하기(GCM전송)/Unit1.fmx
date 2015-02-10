@@ -1,0 +1,73 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 373
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object Button1: TButton
+    Position.X = 80.000000000000000000
+    Position.Y = 120.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = #54392#49772' '#47700#49884#51648' '#51204#49569
+    OnClick = Button1Click
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    Position.X = 80.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label1: TLabel
+    Position.X = 24.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = #51228#47785
+  end
+  object Edit2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Position.X = 80.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label2: TLabel
+    Position.X = 24.000000000000000000
+    Position.Y = 80.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = #45236#50857
+  end
+  object KinveyProvider1: TKinveyProvider
+    ApiVersion = '3'
+    AppKey = 'kid_TVNK4tD2Ii'
+    AppSecret = '09443fe6a25f4ebfb7ea3a129775240b'
+    MasterSecret = '0443dd4c92da4400b9dd9d75f6237c78'
+    UserName = 'testuser'
+    Password = 'testuser'
+    AndroidPush.GCMAppID = '213128932656'
+    PushEndpoint = 'MyMessage'
+    Left = 72
+    Top = 192
+  end
+  object BackendPush1: TBackendPush
+    Provider = KinveyProvider1
+    Extras = <>
+    Left = 184
+    Top = 192
+  end
+end

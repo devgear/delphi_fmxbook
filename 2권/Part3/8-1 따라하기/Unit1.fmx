@@ -1,0 +1,99 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 615
+  ClientWidth = 360
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  OnCreate = FormCreate
+  DesignerMobile = True
+  DesignerWidth = 360
+  DesignerHeight = 640
+  DesignerDeviceName = 'Samsung Galaxy S4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object MViewport3D: TViewport3D
+    Align = alClient
+    Color = claBlack
+    Height = 496.000000000000000000
+    Width = 360.000000000000000000
+    OnMouseDown = MViewport3DMouseDown
+    OnMouseMove = MViewport3DMouseMove
+    OnMouseUp = MViewport3DMouseUp
+    object Grid3D1: TGrid3D
+      Marks = 4.000000000000000000
+      Frequency = 1.000000000000000000
+      LineColor = x50505050
+      RotationAngle.X = 90.000000000000000000
+      Width = 15.000000000000000000
+      Height = 15.000000000000000000
+      Depth = 0.001000000047497451
+      HitTest = False
+      Quanternion = '(-0.707106947898865,0,0,-0.707106590270996)'
+    end
+    object HText3D: TText3D
+      Position.Y = -2.000000000000000000
+      Width = 10.000000000000000000
+      Height = 4.000000000000000000
+      Depth = 2.000000000000000000
+      HitTest = False
+      Text = '3D '#54620#44544' '#46121#45768#45796'.'
+      WordWrap = False
+      Flatness = 1.000000000000000000
+      Sides = [esFront, esBack, esShaft]
+      MaterialShaftSource = LightMaterialSource1
+      MaterialSource = LightMaterialSource1
+    end
+  end
+  object Layout1: TLayout
+    Align = alBottom
+    Height = 119.000000000000000000
+    Position.Y = 496.000000000000000000
+    Width = 360.000000000000000000
+    object ArcDial1: TArcDial
+      Height = 81.000000000000000000
+      Position.X = 112.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 0
+      Frequency = 120.000000000000000000
+      Width = 97.000000000000000000
+    end
+    object Label1: TLabel
+      Height = 23.000000000000000000
+      Position.X = 216.000000000000000000
+      Position.Y = 40.000000000000000000
+      Text = 'View'
+      Width = 82.000000000000000000
+      Trimming = ttCharacter
+    end
+    object Label2: TLabel
+      Height = 23.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 80.000000000000000000
+      Text = 'Pan'
+      TextAlign = taTrailing
+      Width = 82.000000000000000000
+      Trimming = ttCharacter
+    end
+    object Label3: TLabel
+      Height = 23.000000000000000000
+      Position.X = 32.000000000000000000
+      Position.Y = 8.000000000000000000
+      Text = 'Zoom'
+      TextAlign = taTrailing
+      Width = 82.000000000000000000
+      Trimming = ttCharacter
+    end
+  end
+  object LightMaterialSource1: TLightMaterialSource
+    Diffuse = claWhite
+    Ambient = xFF202020
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+    Left = 288
+    Top = 558
+  end
+end

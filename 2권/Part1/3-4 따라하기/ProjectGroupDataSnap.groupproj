@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{17287BB8-3976-4F8C-B823-BF075F464034}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ProjectDSServer\ProjectDSEmpServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ProjectDSMobile\ProjectDSEmpMobile.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ProjectDSEmpServer">
+        <MSBuild Projects="ProjectDSServer\ProjectDSEmpServer.dproj"/>
+    </Target>
+    <Target Name="ProjectDSEmpServer:Clean">
+        <MSBuild Projects="ProjectDSServer\ProjectDSEmpServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ProjectDSEmpServer:Make">
+        <MSBuild Projects="ProjectDSServer\ProjectDSEmpServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ProjectDSEmpMobile">
+        <MSBuild Projects="ProjectDSMobile\ProjectDSEmpMobile.dproj"/>
+    </Target>
+    <Target Name="ProjectDSEmpMobile:Clean">
+        <MSBuild Projects="ProjectDSMobile\ProjectDSEmpMobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ProjectDSEmpMobile:Make">
+        <MSBuild Projects="ProjectDSMobile\ProjectDSEmpMobile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ProjectDSEmpServer;ProjectDSEmpMobile"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ProjectDSEmpServer:Clean;ProjectDSEmpMobile:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ProjectDSEmpServer:Make;ProjectDSEmpMobile:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

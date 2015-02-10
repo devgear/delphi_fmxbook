@@ -1,0 +1,185 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object Label1: TLabel
+      Align = Contents
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Inifile Demo'
+    end
+    object Button1: TButton
+      Align = Right
+      Position.X = 311.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toolbutton'
+      TabOrder = 0
+      Text = #51200#51109
+      OnClick = Button1Click
+    end
+  end
+  object ListBox1: TListBox
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 519.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'transparentlistboxstyle'
+    TabOrder = 5
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = 'listboxitemnodetail'
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    GroupingKind = Grouped
+    object ListBoxGroupHeader1: TListBoxGroupHeader
+      Size.Width = 344.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxgroupheader'
+      TabOrder = 0
+      Text = #49324#50857#51088' '#51221#48372
+    end
+    object ListBoxItem1: TListBoxItem
+      Position.Y = 30.000000000000000000
+      Size.Width = 344.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = #51060#47492
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Right
+        TabOrder = 0
+        Position.X = 208.000000000000000000
+        Position.Y = 6.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Size.Width = 131.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object ListBoxItem2: TListBoxItem
+      Position.Y = 74.000000000000000000
+      Size.Width = 344.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = #45208#51060
+      object Edit2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Right
+        TabOrder = 0
+        KeyboardType = NumberPad
+        Position.X = 208.000000000000000000
+        Position.Y = 6.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Size.Width = 131.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object ListBoxItem3: TListBoxItem
+      Position.Y = 118.000000000000000000
+      Size.Width = 344.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = #51060#47700#51068
+      object Edit3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Right
+        TabOrder = 0
+        KeyboardType = EmailAddress
+        Position.X = 208.000000000000000000
+        Position.Y = 6.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Size.Width = 131.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object ListBoxGroupHeader2: TListBoxGroupHeader
+      Position.Y = 162.000000000000000000
+      Size.Width = 344.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxgroupheader'
+      TabOrder = 4
+      Text = #49436#48260' '#51221#48372
+    end
+    object ListBoxItem4: TListBoxItem
+      Position.Y = 192.000000000000000000
+      Size.Width = 344.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = #50500#51060#54588
+      object Edit4: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Right
+        TabOrder = 0
+        KeyboardType = NumbersAndPunctuation
+        Position.X = 208.000000000000000000
+        Position.Y = 6.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Size.Width = 131.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object ListBoxItem5: TListBoxItem
+      Position.Y = 236.000000000000000000
+      Size.Width = 344.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      Text = #54252#53944#48264#54840
+      object Edit5: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Right
+        TabOrder = 0
+        KeyboardType = NumberPad
+        Position.X = 208.000000000000000000
+        Position.Y = 6.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Size.Width = 131.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object ListBoxItem6: TListBoxItem
+      Position.Y = 280.000000000000000000
+      Size.Width = 344.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      Text = #51088#46041#51217#49549
+      object Switch1: TSwitch
+        Align = Right
+        IsChecked = False
+        Margins.Right = 5.000000000000000000
+        Position.X = 263.000000000000000000
+        Position.Y = 9.000000000000000000
+        Size.Width = 76.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+    end
+  end
+end

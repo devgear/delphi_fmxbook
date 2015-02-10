@@ -1,0 +1,130 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 615
+  ClientWidth = 360
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  DesignerMobile = True
+  DesignerWidth = 360
+  DesignerHeight = 640
+  DesignerDeviceName = 'Samsung Galaxy S4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object MViewport3D: TViewport3D
+    Align = alClient
+    Color = claBlack
+    Height = 615.000000000000000000
+    Width = 360.000000000000000000
+    object MyGrid3D: TGrid3D
+      Marks = 4.000000000000000000
+      Frequency = 1.000000000000000000
+      LineColor = x50505050
+      RotationAngle.X = 90.000000000000000000
+      Width = 10.000000000000000000
+      Height = 10.000000000000000000
+      Depth = 0.001000000047497451
+      Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+    end
+    object Layout1: TLayout
+      Align = alBottom
+      Height = 50.000000000000000000
+      Position.Y = 565.000000000000000000
+      Width = 360.000000000000000000
+      object SpeedButton1: TSpeedButton
+        Align = alLeft
+        Height = 48.000000000000000000
+        Position.Y = 1.000000000000000000
+        StyleLookup = 'arrowlefttoolbutton'
+        Text = 'SpeedButton1'
+        Trimming = ttCharacter
+        Width = 48.000000000000000000
+      end
+      object SpeedButton2: TSpeedButton
+        Align = alRight
+        Height = 48.000000000000000000
+        Position.X = 312.000000000000000000
+        Position.Y = 1.000000000000000000
+        StyleLookup = 'arrowrighttoolbutton'
+        Text = 'SpeedButton2'
+        Trimming = ttCharacter
+        Width = 48.000000000000000000
+      end
+      object SpeedButton3: TSpeedButton
+        Align = alCenter
+        Height = 48.000000000000000000
+        StyleLookup = 'additembutton'
+        Text = 'SpeedButton3'
+        Trimming = ttCharacter
+        Width = 48.000000000000000000
+      end
+    end
+    object BaseCube: TCube
+      Position.Y = 0.500000000000000000
+      Width = 8.000000000000000000
+      Height = 0.500000000000000000
+      Depth = 8.000000000000000000
+      MaterialSource = LightMaterialSource1
+    end
+    object Cylinder1: TCylinder
+      Position.X = 3.000000000000000000
+      Position.Y = -2.000000000000000000
+      Position.Z = 3.000000000000000000
+      Width = 1.000000000000000000
+      Height = 4.000000000000000000
+      Depth = 1.000000000000000000
+      MaterialSource = LightMaterialSource1
+    end
+    object Light1: TLight
+      Color = claWhite
+      LightType = ltPoint
+      SpotCutOff = 180.000000000000000000
+      Position.Y = -7.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+    end
+    object Text3D1: TText3D
+      Position.Y = -1.000000000000000000
+      RotationAngle.X = 15.000000000000000000
+      Width = 8.000000000000000000
+      Height = 2.000000000000000000
+      Depth = 0.500000000000000000
+      Text = #45944#54028#51060' 3D '#47784#48148#51068
+      WordWrap = False
+      Flatness = 1.000000000000000000
+      Sides = [esFront, esBack, esShaft]
+      MaterialShaftSource = LightMaterialSource1
+      MaterialSource = LightMaterialSource1
+      Quanternion = '(-0.130526125431061,0,0,-0.991444885730743)'
+    end
+  end
+  object StatusBar1: TStatusBar
+    Height = 55.000000000000000000
+    Position.Y = 560.000000000000000000
+    ShowSizeGrip = True
+    Visible = False
+    Width = 360.000000000000000000
+    object Button1: TButton
+      Height = 44.000000000000000000
+      Position.X = 143.000000000000000000
+      Position.Y = 5.000000000000000000
+      TabOrder = 0
+      Text = 'Button1'
+      Trimming = ttCharacter
+      Width = 73.000000000000000000
+      OnClick = Button1Click
+    end
+  end
+  object LightMaterialSource1: TLightMaterialSource
+    Diffuse = claWhite
+    Ambient = xFF202020
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+    Left = 288
+    Top = 568
+  end
+end

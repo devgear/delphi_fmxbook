@@ -1,0 +1,107 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 292
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  OnCreate = FormCreate
+  DesignerMobile = True
+  DesignerWidth = 640
+  DesignerHeight = 292
+  DesignerDeviceName = 'Samsung Galaxy S4'
+  DesignerOrientation = 1
+  DesignerOSVersion = ''
+  object MViewport3D: TViewport3D
+    Align = alClient
+    Camera = Camera1
+    Color = claBlack
+    Height = 237.000000000000000000
+    UsingDesignCamera = False
+    Width = 640.000000000000000000
+    OnMouseDown = MViewport3DMouseDown
+    OnMouseMove = MViewport3DMouseMove
+    OnMouseUp = MViewport3DMouseUp
+    object Left_SB: TSpeedButton
+      Height = 48.000000000000000000
+      Position.Y = 128.000000000000000000
+      StyleLookup = 'arrowlefttoolbutton'
+      Text = 'Left_SB'
+      Trimming = ttCharacter
+      Width = 48.000000000000000000
+      OnClick = Left_SBClick
+    end
+    object Right_SB: TSpeedButton
+      Anchors = [akLeft, akRight]
+      Height = 48.000000000000000000
+      Position.X = 584.000000000000000000
+      Position.Y = 104.657142639160200000
+      StyleLookup = 'arrowrighttoolbutton'
+      Text = 'Right_SB'
+      Trimming = ttCharacter
+      Width = 48.000000000000000000
+      OnClick = Right_SBClick
+    end
+    object Grid3D1: TGrid3D
+      Marks = 4.000000000000000000
+      Frequency = 2.000000000000000000
+      LineColor = x50505050
+      RotationAngle.X = 90.000000000000000000
+      Width = 30.000000000000000000
+      Height = 20.000000000000000000
+      Depth = 0.001000000047497451
+      HitTest = False
+      Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+    end
+    object Camera1: TCamera
+      Position.Y = -10.000000000000000000
+      Position.Z = -15.000000000000000000
+      RotationAngle.X = 340.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      Quanternion = '(-0.173647969961166,0,0,0.984807789325714)'
+    end
+    object Dummy1: TDummy
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+    end
+  end
+  object Layout1: TLayout
+    Align = alBottom
+    Height = 55.000000000000000000
+    Position.Y = 237.000000000000000000
+    Width = 640.000000000000000000
+    object ComboBox1: TComboBox
+      DisableFocusEffect = False
+      Height = 32.000000000000000000
+      ItemIndex = 0
+      Position.X = 32.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 0
+      Width = 97.000000000000000000
+      OnChange = ComboBox1Change
+      object TListBoxItem
+        Height = 19.000000000000000000
+        IsSelected = True
+        Text = #49892#47536#45908
+        Width = 19.000000000000000000
+      end
+      object TListBoxItem
+        Height = 19.000000000000000000
+        Text = #53944#50948#49828#53552
+        Width = 19.000000000000000000
+      end
+    end
+  end
+  object RotateTimer: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = RotateTimerTimer
+    Left = 544
+    Top = 294
+  end
+end
