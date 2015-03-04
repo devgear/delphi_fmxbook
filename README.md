@@ -7,3 +7,5 @@
 1권) 1편-기초다지기
 
 2권) 2편-고급 활용(DB, 클라우드, 3D)
+
+델파이에서 Github소스코드 다운로드 받는 방법 - http://tech.devgear.co.kr/delphi_news/404452
